@@ -1,0 +1,15 @@
+---
+interface IconCardProps {
+	iconClass: string,
+	text: string
+}
+
+const { iconClass, text } = Astro.props as IconCardProps;
+---
+
+<div class='w-80 flex flex-col'>
+	<div class=`self-center pi ${ iconClass }`></div>
+	<p class='p-2'>
+		{ text }
+	</p>
+</div>

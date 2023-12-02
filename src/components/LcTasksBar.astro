@@ -1,0 +1,39 @@
+---
+import IconCard from './IconCard.astro'
+
+const header = 'Логистический центр'
+
+const lcTasks: IconCardProps[] = [
+	{
+		iconClass: 'pi-delivery',
+		text: 'Приобретает жатки в Харькове, транспортирует в Казахстан, растамаживает и сертифицирует их'
+	},
+	{
+		iconClass: 'pi-storage',
+		text: 'Поддерживает на складе запас жаток и основную номенклатуру запасных частей'
+	},
+	{
+		iconClass: 'pi-demo',
+		text: 'Оказывает потенциальным покупателям демонстрационно-выставочные услуги и консультации'
+	},
+	{
+		iconClass: 'pi-agreement',
+		text: 'Осуществляет полный комплекс работ по предпродажной подготовке и продаже жаток со склада в Костанае'
+	},
+]; 
+---
+
+<section class="bg-yellow-400">
+	
+	<div class="text-center py-4">
+		<p class="text-3xl font-extralight tracking-widest uppercase py-2">
+			{header}
+		</p>
+	</div>
+
+	<div class="gap-4 py-4">
+		{ lcTasks.map((t) => (<IconCard text={t.text} iconClass={t.iconClass}/>)) }
+	</div> 
+
+</section>
+
